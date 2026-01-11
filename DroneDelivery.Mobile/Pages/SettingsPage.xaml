@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DroneDelivery.Mobile.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Title}">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <Label Text="Backend" FontAttributes="Bold" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Use mock backend" VerticalOptions="Center" />
+                <Switch IsToggled="{Binding UseMockBackend}" />
+            </HorizontalStackLayout>
+
+            <Label Text="API Base URL" />
+            <Entry Text="{Binding ApiBaseUrl}" Placeholder="http://10.0.2.2:5000" />
+
+            <Button Text="Save" Command="{Binding SaveBackendSettingsCommand}" />
+
+            <BoxView HeightRequest="1" Opacity="0.2" />
+
+            <Button Text="Logout" Command="{Binding LogoutCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

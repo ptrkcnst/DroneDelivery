@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="DroneDelivery.Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:DroneDelivery.Mobile.Pages">
+
+    <!-- Login: primul ecran, ca Shell sa aiba un item activ imediat -->
+    <ShellContent Route="login" ContentTemplate="{DataTemplate pages:LoginPage}" />
+
+    <!-- Zona principala a aplicatiei -->
+    <TabBar>
+        <ShellContent Title="Schedule" Route="schedule" ContentTemplate="{DataTemplate pages:DeliveryRequestPage}" />
+        <ShellContent Title="Settings" Route="settings" ContentTemplate="{DataTemplate pages:SettingsPage}" />
+    </TabBar>
+
+</Shell>

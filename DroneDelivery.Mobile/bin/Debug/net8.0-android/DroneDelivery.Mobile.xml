@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DroneDelivery.Mobile</name>
+    </assembly>
+    <members>
+        <member name="T:DroneDelivery.Mobile.Services.ApiClient">
+            <summary>
+            Client HTTP "real". Cand backend-ul nu e pornit, vei primi erori de retea (capturable in VM).
+            Pentru a rula aplicatia fara backend, in MauiProgram se inregistreaza in DEBUG un MockApiClient.
+            </summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.Services.MockApiClient">
+            <summary>
+            Backend fake in-memory. Scop: aplicatia sa mearga complet (navigare + CRUD) fara API real.
+            </summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.Services.SwitchableApiClient">
+            <summary>
+            Alege dinamic intre backend real si mock, pe baza preferintei "UseMockBackend".
+            Astfel aplicatia poate porni fara API, dar poti comuta pe URL real fara rebuild.
+            </summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.AddressEditViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.Id">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.id"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.City">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.city"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.Street">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.street"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.Zip">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.zip"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.Notes">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.notes"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.AddressEditViewModel.SaveAsync"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.AddressesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.AddressesViewModel.loadCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.LoadCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.LoadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.AddressesViewModel.LoadAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.AddressesViewModel.addCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.AddressesViewModel.AddAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.AddressesViewModel.editCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.EditCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.EditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.AddressesViewModel.EditAsync(DroneDelivery.Mobile.Models.AddressDto)"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.AddressesViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.AddressesViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.AddressesViewModel.DeleteAsync(DroneDelivery.Mobile.Models.AddressDto)"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.BaseViewModel.Error">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.BaseViewModel.error"/>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.DeliveryDate">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.deliveryDate"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Email">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.email"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Label">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.label"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Street">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.street"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.City">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.city"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Country">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.country"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Zip">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.zip"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.Notes">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.notes"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.TotalWeightKg">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.totalWeightKg"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.submitCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.SubmitCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.SubmitCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.DeliveryRequestViewModel.SubmitAsync"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.LoginViewModel.Email">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.LoginViewModel.email"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.LoginViewModel.LoginAsync"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.NotificationsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.loadCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.LoadCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.LoadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.LoadAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.NotificationsViewModel.DeleteAsync(DroneDelivery.Mobile.Models.NotificationDto)"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.OrderEditViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.Id">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.id"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.AddressId">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.addressId"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.TotalWeightKg">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.totalWeightKg"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.Status">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.status"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.OrderEditViewModel.SaveAsync"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.OrdersViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.OrdersViewModel.loadCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.LoadCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.LoadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.OrdersViewModel.LoadAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.OrdersViewModel.addCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.OrdersViewModel.AddAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.OrdersViewModel.editCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.EditCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.EditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.OrdersViewModel.EditAsync(DroneDelivery.Mobile.Models.OrderDto)"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.OrdersViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.OrdersViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.OrdersViewModel.DeleteAsync(DroneDelivery.Mobile.Models.OrderDto)"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.RuleEditViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.Id">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.id"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.DaysBefore">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.daysBefore"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.Enabled">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.enabled"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.saveCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.SaveCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.SaveCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.RuleEditViewModel.SaveAsync"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.RulesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.RulesViewModel.loadCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.LoadCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.LoadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.RulesViewModel.LoadAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.RulesViewModel.addCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.RulesViewModel.AddAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.RulesViewModel.editCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.EditCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.EditCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.RulesViewModel.EditAsync(DroneDelivery.Mobile.Models.NotificationRuleDto)"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.RulesViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.RulesViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.RulesViewModel.DeleteAsync(DroneDelivery.Mobile.Models.NotificationRuleDto)"/>.</summary>
+        </member>
+        <member name="T:DroneDelivery.Mobile.ViewModels.SettingsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.ApiBaseUrl">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.SettingsViewModel.apiBaseUrl"/>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.UseMockBackend">
+            <inheritdoc cref="F:DroneDelivery.Mobile.ViewModels.SettingsViewModel.useMockBackend"/>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.SettingsViewModel.saveBackendSettingsCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.SaveBackendSettingsCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.SaveBackendSettingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.SettingsViewModel.SaveBackendSettingsAsync"/>.</summary>
+        </member>
+        <member name="F:DroneDelivery.Mobile.ViewModels.SettingsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:DroneDelivery.Mobile.ViewModels.SettingsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:DroneDelivery.Mobile.ViewModels.SettingsViewModel.LogoutAsync"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Street">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Street" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Zip">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Zip" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Error">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Error" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DeliveryDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DeliveryDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Label">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Label" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Country">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Country" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalWeightKg">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalWeightKg" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AddressId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AddressId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Status">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Status" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DaysBefore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DaysBefore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Enabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Enabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ApiBaseUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ApiBaseUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UseMockBackend">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UseMockBackend" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Id">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Id" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.City">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "City" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Street">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Street" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Zip">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Zip" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Notes">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Notes" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Error">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Error" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DeliveryDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DeliveryDate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Label">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Label" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Country">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Country" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalWeightKg">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalWeightKg" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AddressId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AddressId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Status">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Status" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DaysBefore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DaysBefore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Enabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Enabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ApiBaseUrl">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ApiBaseUrl" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UseMockBackend">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UseMockBackend" generated properties.</summary>
+        </member>
+    </members>
+</doc>

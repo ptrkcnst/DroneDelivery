@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TISH4QkcnIfCtEHC+bQP6qQZlZTrWGLZPl1mEi6XvnI=",
+  "Source": "DroneDelivery.WebApi",
+  "BasePath": "_content/DroneDelivery.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

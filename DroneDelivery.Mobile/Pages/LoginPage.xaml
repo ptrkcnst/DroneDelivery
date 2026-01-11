@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DroneDelivery.Mobile.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:DroneDelivery.Mobile.ViewModels"
+    Title="{Binding Title}">
+
+    <VerticalStackLayout Padding="20" Spacing="12">
+        <Label Text="Drone Delivery" FontSize="28" />
+
+        <Entry Placeholder="Email" Text="{Binding Email}" Keyboard="Email" />
+        <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
+
+        <Button Text="Login" Command="{Binding LoginCommand}" />
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+
+        <Label Text="{Binding Error}" TextColor="Red" />
+    </VerticalStackLayout>
+</ContentPage>

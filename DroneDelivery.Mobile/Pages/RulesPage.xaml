@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DroneDelivery.Mobile.Pages.RulesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:DroneDelivery.Mobile.Models"
+    Title="{Binding Title}">
+
+    <Grid RowDefinitions="Auto,Auto,*" Padding="12">
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Refresh" Command="{Binding LoadCommand}" />
+            <Button Text="Add" Command="{Binding AddCommand}" />
+        </HorizontalStackLayout>
+
+        <Label Grid.Row="1" Text="{Binding Error}" TextColor="Red" />
+
+        <CollectionView Grid.Row="2" ItemsSource="{Binding Items}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:NotificationRuleDto">
+                    <Frame Margin="0,8" Padding="12">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding DaysBefore, StringFormat='{0} days before'}" FontSize="18"/>
+                            <Label Text="{Binding Enabled, StringFormat='Enabled: {0}'}" />
+
+                            <HorizontalStackLayout Spacing="10">
+                                <Button Text="Edit"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.EditCommand}"
+                                        CommandParameter="{Binding .}" />
+                                <Button Text="Delete"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.DeleteCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <ActivityIndicator Grid.Row="2" VerticalOptions="End" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+    </Grid>
+</ContentPage>

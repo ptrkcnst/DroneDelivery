@@ -1,0 +1,112 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DroneDelivery.Mobile
+build_property.ProjectDir = /Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/AddressEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.AddressEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddressEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddressEditPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/AddressesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.AddressesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/AddressesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/AddressesPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/DeliveryRequestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.DeliveryRequestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/DeliveryRequestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/DeliveryRequestPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/LoginPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/NotificationsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.NotificationsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/NotificationsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/NotificationsPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/OrderEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.OrderEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/OrderEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/OrderEditPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/OrdersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.OrdersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/OrdersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/OrdersPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/RuleEditPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.RuleEditPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/RuleEditPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/RuleEditPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/RulesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.RulesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/RulesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/RulesPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Pages/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Pages.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/SettingsPage.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/ptrkcnst/Downloads/DroneDelivery/DroneDelivery.Mobile/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DroneDelivery.Mobile.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
